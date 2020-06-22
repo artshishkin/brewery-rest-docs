@@ -17,6 +17,7 @@ import org.springframework.restdocs.payload.FieldDescriptor;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.util.StringUtils;
 
+import java.time.OffsetDateTime;
 import java.util.UUID;
 
 import static org.hamcrest.core.Is.is;
@@ -75,12 +76,12 @@ public class BeerControllerTest {
                                 parameterWithName("beerId").description("ID of Beer (UUID)")
                         ),
                         responseFields(
-                                fieldWithPath("id").description("ID of Beer"),
+                                fieldWithPath("id").description("ID of Beer").type(UUID.class.getSimpleName()),
                                 fieldWithPath("beerName").description("Beer Name"),
                                 fieldWithPath("beerStyle").description("Beer Style"),
                                 fieldWithPath("upc").description("UPC"),
-                                fieldWithPath("createdDate").description("Created Date"),
-                                fieldWithPath("lastUpdatedDate").description("Last Updated Date")
+                                fieldWithPath("createdDate").description("Created Date").type(OffsetDateTime.class.getSimpleName()),
+                                fieldWithPath("lastUpdatedDate").description("Last Updated Date").type(OffsetDateTime.class.getSimpleName())
                         )
                 ));
     }
@@ -134,12 +135,12 @@ public class BeerControllerTest {
                         pathParameters(parameterWithName("beerId").description("ID of Beer")),
                         requestFields(
                                 attributes(key("title").value("Fields for user modification")),
-                                fields.withPath("id").description("ID of Beer"),
+                                fields.withPath("id").description("ID of Beer").type(UUID.class.getSimpleName()),
                                 fields.withPath("beerName").description("Beer Name"),
                                 fields.withPath("beerStyle").description("Beer Style"),
                                 fields.withPath("upc").description("UPC"),
-                                fields.withPath("createdDate").ignored(),
-                                fields.withPath("lastUpdatedDate").ignored()
+                                fields.withPath("createdDate").ignored().type(OffsetDateTime.class.getSimpleName()),
+                                fields.withPath("lastUpdatedDate").ignored().type(OffsetDateTime.class.getSimpleName())
                         )
                 ));
 
