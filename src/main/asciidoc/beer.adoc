@@ -1,0 +1,85 @@
+= Beer Controller Docs
+Art Shyshkin;
+:doctype: book
+:icons: font
+:source-highlighter: highlightjs
+
+Sample application demonstrating how to use Spring REST Docs with JUnit 5.
+
+`BeerOrderControllerTest` makes a call to a very simple service and produces three
+documentation snippets.
+
+`GET BEER`
+
+Sample of a request using cURL:
+
+include::{snippets}/v1/beer-get/curl-request.adoc[]
+
+Sample HTTP request:
+
+include::{snippets}/v1/beer-get/http-request.adoc[]
+
+Sample HTTPIE request:
+
+include::{snippets}/v1/beer-get/httpie-request.adoc[]
+
+Path parameters:
+
+include::{snippets}/v1/beer-get/path-parameters.adoc[]
+
+HTTP response:
+
+include::{snippets}/v1/beer-get/http-response.adoc[]
+
+Response Body:
+include::{snippets}/v1/beer-get/response-body.adoc[]
+
+Response Fields:
+include::{snippets}/v1/beer-get/response-fields.adoc[]
+
+`POST BEER`
+
+Sample of a request using cURL:
+include::{snippets}/v1/beer-post/curl-request.adoc[]
+
+Sample HTTP request:
+include::{snippets}/v1/beer-post/http-request.adoc[]
+
+Sample HTTPIE request:
+include::{snippets}/v1/beer-post/httpie-request.adoc[]
+
+Request Fields:
+include::{snippets}/v1/beer-post/request-fields.adoc[]
+
+Request Body:
+include::{snippets}/v1/beer-post/request-body.adoc[]
+
+HTTP response:
+include::{snippets}/v1/beer-post/http-response.adoc[]
+
+Response Headers:
+include::{snippets}/v1/beer-post/response-headers.adoc[]
+
+`UPDATE BEER`
+
+Path Parameters:
+include::{snippets}/v1/beer-update/path-parameters.adoc[]
+
+Sample of a request using cURL:
+include::{snippets}/v1/beer-update/curl-request.adoc[]
+
+Sample HTTP request:
+include::{snippets}/v1/beer-update/http-request.adoc[]
+
+Sample HTTPIE request:
+include::{snippets}/v1/beer-update/httpie-request.adoc[]
+
+Request Fields:
+include::{snippets}/v1/beer-update/request-fields.adoc[]
+
+Request Body:
+include::{snippets}/v1/beer-update/request-body.adoc[]
+
+HTTP response:
+include::{snippets}/v1/beer-update/http-response.adoc[]
+
